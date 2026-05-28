@@ -5,13 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class Main {
 
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        List<Funcionario> funcionario = new ArrayList<>();
+        List<Funcionario> funcionarios = new ArrayList<>();
 
         System.out.println("=== CADASTRO FUNCIONARIO ===");
 
@@ -31,13 +30,13 @@ public class Main {
         String nomeCargo = sc.nextLine();
 
         System.out.print("Salario Base:");
-        Double salario = sc.nextDouble();
+        double salario = sc.nextDouble();
 
         Cargo cargo = new Cargo(1, nomeCargo, salario);
 
         Funcionario funcionario = new Funcionario(id, nome, cpf, cargo, salario, 0, 0);
 
-        funcionario.add(funcionario);
+        funcionarios.add(funcionario);
         System.out.println("\n FUNCIONARIO CADASTRADO!");
 
 
@@ -58,7 +57,3 @@ public class Main {
     }
 
 
-
-
-
-}
